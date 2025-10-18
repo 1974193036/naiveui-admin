@@ -1,3 +1,3 @@
 <template>
-  <div>order</div>
+  <div>order<input></div>
 </template>

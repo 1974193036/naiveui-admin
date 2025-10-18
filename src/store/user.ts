@@ -25,10 +25,10 @@ export const useUserStore = defineStore('user', () => {
 
   const u = getUserInfo()!
   const user = shallowRef<UserInfo>({
-    name: u.name ?? '张三',
-    phone: u.phone ?? '13333333333',
-    roles: u.roles ?? ['admin'],
-    token: u.token ?? '123456',
+    name: u.name ?? '',
+    phone: u.phone ?? '',
+    roles: u.roles ?? [],
+    token: u.token ?? '',
   })
 
   async function login(_payload: UserLoginPayload) {

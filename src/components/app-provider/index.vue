@@ -1,4 +1,4 @@
-<script setup lang='tsx'>
+<script setup lang='ts'>
 import type { ProConfigProviderProps } from 'pro-naive-ui'
 import { dateZhCN } from 'naive-ui'
 import { zhCN } from 'pro-naive-ui'

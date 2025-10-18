@@ -8,6 +8,7 @@ import {
   nMenuPlugin,
   progressPlugin,
   rbacAccessPlugin,
+  refreshPlugin,
   transitionPlugin,
 } from '@pro/router'
 import { createWebHashHistory } from 'vue-router'
@@ -41,6 +42,11 @@ export async function setupRouter(app: App) {
        * 路由缓存插件
        */
       keepAlivePlugin(),
+
+      /**
+       * 刷新插件
+       */
+      refreshPlugin(),
 
       /**
        * 路由过渡插件

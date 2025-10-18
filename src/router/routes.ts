@@ -47,7 +47,6 @@ const ignoreAccessRoutes = [
     },
   },
 ]
-
 /**
  * 权限路由，前端权限模式下会使用该数据，这里的路由放在菜单栏中
  */
@@ -65,7 +64,7 @@ const accessRoutes = [
     component: () => import(/* webpackChunkName: "order" */'@/views/order/index.vue'),
     meta: {
       title: '订单页',
-      icon: 'mdi:page-previous-outline',
+      icon: 'mdi:order-bool-ascending-variant',
       roles: ['admin'], // 控制权限
       keepAlive: true, // 启用缓存
     },
@@ -75,8 +74,8 @@ const accessRoutes = [
     component: () => import(/* webpackChunkName: "message" */'@/views/message/index.vue'),
     meta: {
       title: '消息页',
-      icon: 'mdi:forbid',
-      roles: ['other'], // 控制权限
+      icon: 'mdi:message-text',
+      roles: ['admin', 'other'], // 控制权限
       keepAlive: true, // 启用缓存
     },
   },

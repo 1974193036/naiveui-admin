@@ -1,9 +1,18 @@
-<script setup lang='tsx'>
+<script setup lang='ts'>
 import type { ProLayoutMode } from 'pro-naive-ui'
 import { storeToRefs } from 'pinia'
 import { computed } from 'vue'
 import logo from '@/assets/svg/logo.svg'
 import setting from '@/settings/projectSetting'
+
+interface LogoProps {
+  /**
+   * 是否在移动端使用侧边栏抽屉
+   */
+  usingMobileSidebarDrawer?: boolean
+}
+
+const { usingMobileSidebarDrawer = false } = defineProps<LogoProps>()
 
 const title = setting.app.title
 const {
@@ -13,6 +22,9 @@ const {
 } = storeToRefs(useLayoutStore())
 
 const enablePaddingLeft = computed(() => {
+  if (usingMobileSidebarDrawer) {
+    return !collapsed.value
+  }
   if (mobile.value) {
     return true
   }
@@ -26,6 +38,9 @@ const enablePaddingLeft = computed(() => {
 })
 
 const showAppTitle = computed(() => {
+  if (usingMobileSidebarDrawer) {
+    return !collapsed.value
+  }
   if (mobile.value) {
     return false
   }

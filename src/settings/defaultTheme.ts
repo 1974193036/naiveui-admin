@@ -1,4 +1,4 @@
-// Naive UI 常见的主题变量
+// Naive UI 常见的主题变量，如果需要更改，请在 projectSetting.ts 中覆盖进行修改
 const defaultTheme = {
   primaryColor: '#18a058',
   primaryColorHover: '#36ad6a',

@@ -6,6 +6,7 @@ import { pluginVueJsx } from '@rsbuild/plugin-vue-jsx'
 import UnoCSS from '@unocss/postcss'
 import { ProNaiveUIResolver } from 'pro-naive-ui-resolver'
 import AutoImport from 'unplugin-auto-import/rspack'
+import Icons from 'unplugin-icons/rspack'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/rspack'
 import setting from './src/settings/projectSetting'
@@ -58,6 +59,9 @@ export default defineConfig({
           ],
           dirs: [],
           dts: 'typings/components.d.ts',
+        }),
+        Icons({
+          compiler: 'vue3',
         }),
       ],
     },
