@@ -17,7 +17,8 @@ pnpm dev
 Build the app for production:
 
 ```bash
-pnpm build
+pnpm build:test # 测试环境
+pnpm build:prod # 生产环境
 ```
 
 Preview the production build locally:
@@ -26,12 +27,36 @@ Preview the production build locally:
 pnpm preview
 ```
 
-## Learn more
+## 打包工具
 
 基于 `rsbuild` 的打包工具
 
+- 底层的打包工具由 webpack 替换为 Rspack，提供 5 ~ 10 倍的构建性能。
+
+- Rsbuild 兼容大部分的 webpack 插件和所有 Rspack 插件
+
+## rsbuild 更多介绍
 - [Rsbuild documentation](https://rsbuild.rs) - explore Rsbuild features and APIs.
 - [Rsbuild GitHub repository](https://github.com/web-infra-dev/rsbuild) - your feedback and contributions are welcome!
+
+## 组件库
+
+[naive-ui](https://www.naiveui.com/)，底层组件库
+
+[pro-naive-ui](https://naive-ui.pro-components.cn)，基于 Naive UI 二次封装的，实现更强大的功能，也完全支持 naive-ui 的功能
+
+## Layout布局
+
+基于`pro-naive-ui`的 `pro-layout`快速实现
+
+## 路由插件
+
+[路由插件](./packages/router/)
+采用了一种创新的插件化架构设计，把复杂的功能拆分成一个个独立的"积木块"，每个积木块负责特定的功能，然后通过插件系统把它们组合起来
+
+[参考文档](https://docs-naive-ui-pro.pro-components.cn/router-plugins/intro.html)
+
+感谢插件的作者
 
 ## 图标
 [@iconify/vue](https://icon-sets.iconify.design/) -- 使用起来最方便，但是是在线的图标库，不适合私有化部署
