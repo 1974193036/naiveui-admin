@@ -59,7 +59,7 @@ pnpm preview
 感谢插件的作者
 
 ## 图标
-[@iconify/vue](https://icon-sets.iconify.design/) -- 使用起来最方便，但是是在线的图标库，不适合私有化部署
+[@iconify/vue](https://www.npmjs.com/package/@iconify/vue) -- 使用起来最方便，但是是在线的图标库，不适合私有化部署
 
 [@iconify/json](https://www.npmjs.com/package/@iconify/json) -- 在`@iconify/vue`的基础上，添加离线加载方案，
 并通过`unplugin-icons`自动按需加载，按需打包
