@@ -6,7 +6,11 @@ import thinThemeColors from './src/utils/unoTheme'
 
 export default defineConfig({
   content: {
-    filesystem: ['./src/**/*.{html,js,ts,jsx,tsx,vue}'],
+    pipeline: {
+      include: [
+        /\.(vue|[jt]sx|[jt]s|html)($|\?)/,
+      ],
+    },
   },
   presets: [presetUno(), presetAttributify(), presetChinese(), presetEase(), presetTypography()],
   transformers: [transformerDirectives(), transformerVariantGroup()],

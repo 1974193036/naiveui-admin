@@ -72,6 +72,16 @@ export default defineConfig({
           compiler: 'vue3',
         }),
       ],
+      // optimization: {
+      //   splitChunks: {
+      //     cacheGroups: {
+      //       naiveui: {
+      //         test: /\/(naive-ui|pro-naive-ui)\//,
+      //         name: 'lib-naiveui',
+      //       },
+      //     },
+      //   },
+      // },
     },
   },
   source: {

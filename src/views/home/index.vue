@@ -16,7 +16,7 @@ const formattedDate = computed(() => {
 </script>
 
 <template>
-  <div>
+  <div class="home-page">
     <!-- 欢迎区域 -->
     <div class="mb-3">
       <n-card class="bg-white/90 backdrop-blur-sm">

@@ -92,7 +92,7 @@ function findAvailableMenuKey() {
     :show-sidebar="showSidebar"
     :show-sidebar-extra="showSidebar"
     nav-class="bg-#fff"
-    content-class="pro-layout__content--embedded p-16px bg-action"
+    content-class="pro-layout__content--embedded p-16px bg-action!"
     :sidebar-collapsed-width="sidebarCollapsedWidth"
   >
     <template #logo>
