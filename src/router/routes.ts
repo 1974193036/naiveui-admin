@@ -75,7 +75,7 @@ const accessRoutes = [
     meta: {
       title: '消息页',
       icon: 'mdi:message-text',
-      roles: ['admin', 'other'], // 控制权限
+      roles: ['other'], // 控制权限
       keepAlive: true, // 启用缓存
     },
   },

@@ -70,7 +70,7 @@ export async function setupRouter(app: App) {
         service: async () => {
           const userStore = useUserStore()
           const { user } = storeToRefs(userStore)
-          console.log('rbacAccessPlugin user =====> ', user)
+          // console.log('rbacAccessPlugin user =====> ', user)
           const baseInfo = {
             logined: !!user.value.token, // 是否已登录
             homePath: HOME_ROUTE_PATH, // 首页路径，登录后会跳转到此路径，默认为 '/home'，可在这里控制不同用户跳转不同的首页地址
@@ -78,7 +78,7 @@ export async function setupRouter(app: App) {
             parentNameForAddRoute: ROOT_ROUTE_NAME, // 添加路由时的父级路由名称，设置后使用 router.addRoute('Root',routes)，默认使用 router.addRoute(routes)
             onRoutesBuilt: (routes: RouteRecordRaw[]) => {
               // 路由构建完成后回调，routes 为最终的 vue-router 路由
-              console.log('rbacAccessPlugin routes =====>', routes)
+              // console.log('rbacAccessPlugin routes =====>', routes)
               userStore.routes = routes
             },
           }

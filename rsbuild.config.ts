@@ -48,6 +48,14 @@ export default defineConfig({
             'vue',
             'vue-router',
             'pinia',
+            {
+              'naive-ui': [
+                'useDialog',
+                'useMessage',
+                'useNotification',
+                'useLoadingBar',
+              ],
+            },
           ],
           dirs: ['src/store'],
           dts: 'typings/auto-imports.d.ts',

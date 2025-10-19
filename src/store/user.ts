@@ -31,7 +31,7 @@ export const useUserStore = defineStore('user', () => {
     token: u.token ?? '',
   })
 
-  async function login(_payload: UserLoginPayload) {
+  async function login(payload: UserLoginPayload) {
     try {
       loading.value = true
       // 这里先模拟调用登录接口
@@ -41,7 +41,7 @@ export const useUserStore = defineStore('user', () => {
             data: {
               name: '张三',
               phone: '13333333333',
-              roles: ['admin'],
+              roles: payload.username === 'admin' ? ['admin'] : ['other'],
               token: '123456',
             },
           })
